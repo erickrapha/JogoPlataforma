@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public int heath = 3;
     public float velocidade;
-    public float forçaPulo;
+    public float pulo;
     public GameObject Bow;
     public Transform firePoint;
     private bool isJumping;
@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                anim.SetInteger("Transição", 1);
+                anim.SetInteger("Transiï¿½ï¿½o", 1);
             }
                 
             transform.eulerAngles = new Vector3(0, 0, 0);
@@ -57,14 +57,14 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                anim.SetInteger("Transição", 1);
+                anim.SetInteger("Transiï¿½ï¿½o", 1);
             }
              
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
         if (movimente == 0 && !isJumping && !isFire)
         {
-            anim.SetInteger("Transição", 0);
+            anim.SetInteger("Transiï¿½ï¿½o", 0);
         }
     }
     void Pulo()
@@ -73,8 +73,8 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                anim.SetInteger("Transição", 2);
-                rig.AddForce(new Vector2(0, forçaPulo), ForceMode2D.Impulse);
+                anim.SetInteger("Transiï¿½ï¿½o", 2);
+                rig.AddForce(new Vector2(0, pulo), ForceMode2D.Impulse);
                 doubleJump = true;
                 isJumping = true;
             }
@@ -82,8 +82,8 @@ public class Player : MonoBehaviour
             {
                 if (doubleJump)
                 {
-                    anim.SetInteger("Transição", 2);
-                    rig.AddForce(new Vector2(0, forçaPulo * 2), ForceMode2D.Impulse);
+                    anim.SetInteger("Transiï¿½ï¿½o", 2);
+                    rig.AddForce(new Vector2(0, pulo * 2), ForceMode2D.Impulse);
                     doubleJump = false;
                 }
             }            

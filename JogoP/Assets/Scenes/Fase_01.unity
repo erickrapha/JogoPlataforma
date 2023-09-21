@@ -747,6 +747,7 @@ GameObject:
   - component: {fileID: 180679060}
   - component: {fileID: 180679059}
   - component: {fileID: 180679058}
+  - component: {fileID: 180679063}
   m_Layer: 0
   m_Name: EnemyGuy (1)
   m_TagString: Enemy
@@ -878,6 +879,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180679063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180679057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d1952966df4b34290bb236d1466aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  WalkTime: 1
+  WalkRight: 0
+  heath: 1
+  damage: 1
 --- !u!1 &197152277
 GameObject:
   m_ObjectHideFlags: 0
@@ -12258,7 +12276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300515391}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.750584, y: 0.18605173, z: 0.0054636886}
+  m_LocalPosition: {x: -20.22, y: 0.18605173, z: 0.0054636886}
   m_LocalScale: {x: 1, y: 13.644234, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12944,7 +12962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616696495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.98, y: 0.19, z: 0.0054636886}
+  m_LocalPosition: {x: 25.59, y: 0.19, z: 0.0054636886}
   m_LocalScale: {x: 1, y: 13.644234, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
