@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                anim.SetInteger("Transi��o", 1);
+                anim.SetInteger("Transicao", 1);
             }
                 
             transform.eulerAngles = new Vector3(0, 0, 0);
@@ -57,14 +57,14 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                anim.SetInteger("Transi��o", 1);
+                anim.SetInteger("Transicao", 1);
             }
              
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
         if (movimente == 0 && !isJumping && !isFire)
         {
-            anim.SetInteger("Transi��o", 0);
+            anim.SetInteger("Transicao", 0);
         }
     }
     void Pulo()
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                anim.SetInteger("Transi��o", 2);
+                anim.SetInteger("Transicao", 2);
                 rig.AddForce(new Vector2(0, pulo), ForceMode2D.Impulse);
                 doubleJump = true;
                 isJumping = true;
@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
             {
                 if (doubleJump)
                 {
-                    anim.SetInteger("Transi��o", 2);
+                    anim.SetInteger("Transicao", 2);
                     rig.AddForce(new Vector2(0, pulo * 2), ForceMode2D.Impulse);
                     doubleJump = false;
                 }
@@ -150,7 +150,7 @@ public class Player : MonoBehaviour
         {
             isJumping = false;
         }
-        if (coll.gameObject.layer == 6)
+        if (coll.gameObject.layer == 3)
         {
             GameController.instance.GameOver();
         }

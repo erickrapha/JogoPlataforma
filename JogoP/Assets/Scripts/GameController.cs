@@ -14,10 +14,12 @@ public class GameController : MonoBehaviour
     public int totalScore;
     public static GameController instance;
     private bool isPaused;
+    private bool isGameOver;
 
     void Awake()
     {
         instance = this;
+        isGameOver = false;
     }
 
     void Start()
@@ -47,22 +49,30 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             isPaused = !isPaused;
-            pauseObj.SetActive(isPaused);
         }
-        if (isPaused)
+        if (isGameOver == true)
         {
-            Time.timeScale = 0f;
+            Time.timeScale = 0;
         }
         else
         {
-            Time.timeScale = 1f;
+            pauseObj.SetActive(isPaused);
+
+            if (isPaused == true)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
         }
     }
 
     public void GameOver()
     {
         gameOverObj.SetActive(true);
-        //Time.timeScale = 0f;
+        isGameOver = true;
     }
 
     public void RestartGame()
